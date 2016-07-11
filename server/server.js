@@ -10,9 +10,10 @@ var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/mvp'
 mongoose.connect(mongoURI);
 
 //configure server with middleware and routing
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../../client'));
+// app.use(bodyParser.urlencoded({extended:true}));
+// app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../'));
+
 
 
 var port = process.env.PORT || 1337;
