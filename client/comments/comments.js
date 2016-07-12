@@ -4,6 +4,13 @@ angular.module('mvp.comments', [])
   $scope.posts = posts.posts;
 
   $scope.post = posts.posts[$stateParams.id]
-  $scope.id = $stateParams.id
+
+  $scope.addComment = function(){
+    $scope.post.comments.push({
+      body: $scope.commentbody,
+      author: $scope.author
+    })
+  }
+
 
 })

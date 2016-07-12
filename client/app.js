@@ -2,7 +2,8 @@ angular.module('mvp', [
   'ui.router',
   'mvp.newpost',
   'mvp.posts',
-  'mvp.comments'
+  'mvp.comments',
+  'mvp.services'
   ])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
