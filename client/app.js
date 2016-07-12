@@ -1,7 +1,8 @@
 angular.module('mvp', [
   'ui.router',
   'mvp.newpost',
-  'mvp.posts'
+  'mvp.posts',
+  'mvp.comments'
   ])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -10,6 +11,11 @@ angular.module('mvp', [
       templateUrl: 'client/posts/posts.html',
       url: '/posts',
       controller: 'PostsController'
+    })
+    .state('comments', {
+      templateUrl: 'client/comments/comments.html',
+      url: '/posts/{id}',
+      controller: 'CommentsController'
     })
     .state('newpost', {
       templateUrl: 'client/newpost/newpost.html',
